@@ -6,6 +6,14 @@
 </head>
 <body>
     <h1>Todos</h1>
-    <p>You don't have any todos.</p>
+    {% if todos %}
+        <div>
+        {% for todo in todos %}
+            <div>{% if todo.done %}&#10003; {% else %}&#x25a2; {% endif %}{{ todo.name }}</div>
+        {% endfor %}
+        </div>
+    {% else %}
+        <p>You don't have any todos.</p>
+    {% endif %}
 </body>
 </html>
