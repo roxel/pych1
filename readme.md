@@ -1,4 +1,4 @@
-Boldare Chapter-Python #1
+Chapter-Python #1
 ===
 
 Apps in this project:
