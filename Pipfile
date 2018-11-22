@@ -10,6 +10,7 @@ django = "*"
 djangorestframework = "*"
 psycopg2 = "*"
 gdal = "*"
+graphene-django = "*"
 
 [requires]
 python_version = "3.7"

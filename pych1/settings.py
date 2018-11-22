@@ -39,9 +39,14 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.gis',
     'rest_framework',
+    'graphene_django',
     'todos',
     'places',
 ]
+
+GRAPHENE = {
+    'SCHEMA': 'pych1.schema.schema',
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

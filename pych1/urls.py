@@ -16,6 +16,7 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from django.urls import path, include
+from graphene_django.views import GraphQLView
 from rest_framework import routers
 
 from places.api import CategoryViewSet, PlaceViewSet, RatingViewSet, UserViewSet
@@ -31,5 +32,8 @@ router.register(r'todos', TodoViewSet)
 
 urlpatterns = [
     url('^api/', include(router.urls)),
+    path('', include('todos.urls')),
+    url(r'^graphql', GraphQLView.as_view(graphiql=True)),
     path('admin/', admin.site.urls),
 ]
+
