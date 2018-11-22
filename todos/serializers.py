@@ -5,4 +5,4 @@ from todos.models import Todo
 class TodoSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Todo
-        fields = ('name', 'done')
+        exclude = ()
